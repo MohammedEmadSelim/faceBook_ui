@@ -7,9 +7,9 @@ class ProfileAvatar extends StatelessWidget {
    ProfileAvatar({
     super.key,
     required this.imageUrl,
-     required this.isAcrive  ,
+      this.isAcrive  ,
   });
-  bool isAcrive ;
+  bool? isAcrive ;
 
   final String imageUrl;
 
@@ -22,7 +22,7 @@ class ProfileAvatar extends StatelessWidget {
           backgroundColor: Colors.grey[200],
           backgroundImage: CachedNetworkImageProvider(imageUrl),
         ),
-        isAcrive? Positioned(
+        isAcrive??false? Positioned(
           bottom: 0,
           right: 0,
           child: Container(
